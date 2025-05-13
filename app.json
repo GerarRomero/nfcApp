@@ -20,10 +20,35 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "NFC",
+        "CAMERA",
+        "INTERNET",
+        "android.permission.NFC",
+        "android.permission.CAMERA"
+      ],
+      "minSdkVersion": 24,
+      "package": "com.javier11.nfcphotoapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permitir que $(PRODUCT_NAME) acceda a tu cámara",
+          "microphonePermission": "Permitir que $(PRODUCT_NAME) acceda a tu micrófono",
+          "recordAudioAndroid": true
+        }
+      ],
+      "react-native-nfc-manager"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "53227215-4f77-4060-8d35-9f9646caea88"
+      }
     }
   }
 }
